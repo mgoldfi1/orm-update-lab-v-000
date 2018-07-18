@@ -55,7 +55,7 @@ attr_accessor :id, :name, :grade
     sql = "SELECT id, name, grade  FROM students WHERE name = ?"
     DB[:conn].execute(sql,name)
     binding.pry
-    self.new_from_db(DB[:conn].execute(sql,name))
+    self.new_from_db(DB[:conn].execute(sql,name)[0])
   end
 
 
