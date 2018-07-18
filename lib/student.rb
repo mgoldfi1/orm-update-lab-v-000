@@ -47,7 +47,7 @@ attr_accessor :id, :name, :grade
   end
 
   def self.new_from_db(row)
-    
+
   end
 
 
