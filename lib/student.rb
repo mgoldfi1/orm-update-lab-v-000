@@ -51,8 +51,8 @@ attr_accessor :id, :name, :grade
     binding.pry
     sql = "SELECT * FROM students"
     DB[:conn].execute(sql).map do |x|
-
   end
+end
 
 
 
