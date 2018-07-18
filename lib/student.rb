@@ -48,7 +48,6 @@ attr_accessor :id, :name, :grade
   end
 
   def self.new_from_db(row)
-    binding.pry
     sql = "SELECT * FROM students"
     DB[:conn].execute(sql).map do |x|
   end
