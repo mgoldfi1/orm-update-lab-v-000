@@ -52,7 +52,7 @@ attr_accessor :id, :name, :grade
     end
 
   def self.find_by_name(name)
-    sql = "SELECT name, grade  FROM students WHERE name = ?"
+    sql = "SELECT id, name, grade  FROM students WHERE name = ?"
     DB[:conn].execute(sql,name)
     binding.pry
     self.new_from_db(DB[:conn].execute(sql,name))
